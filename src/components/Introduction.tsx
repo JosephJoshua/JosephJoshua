@@ -11,15 +11,23 @@ import tailwind from '@/public/icons/tailwind.svg';
 import trpc from '@/public/icons/trpc.svg';
 import golang from '@/public/icons/golang.svg';
 import postgresql from '@/public/icons/postgresql.svg';
+import clsx from 'clsx';
 
-const Introduction = () => {
+export type IntroductionProps = {
+  className?: string;
+};
+
+const Introduction = ({ className }: IntroductionProps) => {
   return (
-    <div className="mx-auto py-24 max-w-4xl">
+    <section className={clsx('mx-auto max-w-4xl', className)}>
       <div className="flex gap-16 items-center">
         <div>
-          <h1 className="font-poppins font-bold text-5xl text-darkgrey leading-tight">Full-stack Web Developer 👋</h1>
+          <h1 className="font-poppins font-bold text-5xl text-darkgrey leading-tight">
+            Full-stack Web Developer 👋
+          </h1>
           <p className="mt-4 text-lg text-lightgrey">
-            Hi, I'm Joseph Joshua Anggita. A passionate Full-stack Web Developer based in Jakarta, Indonesia. 📍
+            Hi, I'm Joseph Joshua Anggita. A passionate Full-stack Web Developer based in Jakarta,
+            Indonesia. 📍
           </p>
 
           <div className="flex flex-row gap-4 mt-6 select-none">
@@ -33,7 +41,11 @@ const Introduction = () => {
           </div>
         </div>
 
-        <Image className="w-72 border-3 border-black animate-morph-infinite select-none" src={portrait} alt="" />
+        <Image
+          className="w-72 border-3 border-black animate-morph-infinite select-none"
+          src={portrait}
+          alt=""
+        />
       </div>
 
       <div className="flex items-center mt-16 text-lg">
@@ -49,7 +61,7 @@ const Introduction = () => {
           <Image src={postgresql} alt="PostgreSQL" title="PostgreSQL" className="rounded w-8" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
