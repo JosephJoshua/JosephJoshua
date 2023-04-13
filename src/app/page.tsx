@@ -6,8 +6,6 @@ const HomePage = () => {
     <main className="">
       <Introduction className="mt-36 mb-32" />
       <About className="mt-20" />
-
-      <div className="h-[1000px]"></div>
     </main>
   );
 };

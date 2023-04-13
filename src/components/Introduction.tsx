@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import github from '@/public/icons/github.svg';
 import linkedin from '@/public/icons/linkedin.svg';
+import envelope from '@/public/icons/envelope.svg';
 
 import portrait from '@/public/images/portrait.png';
 
@@ -30,13 +31,17 @@ const Introduction = ({ className }: IntroductionProps) => {
             Indonesia. 📍
           </p>
 
-          <div className="flex flex-row gap-4 mt-6 select-none">
+          <div className="flex flex-row items-center gap-5 mt-6 select-none">
             <a href="https://github.com/JosephJoshua">
-              <Image src={github} alt="Github" className="w-7" />
+              <Image src={github} alt="Github" title="GitHub" className="w-7" />
             </a>
 
             <a href="https://linkedin.com/in/joseph-joshua-anggita">
-              <Image src={linkedin} alt="LinkedIn" className="w-7" />
+              <Image src={linkedin} alt="LinkedIn" title="LinkedIn" className="w-7" />
+            </a>
+
+            <a href="mailto:jj.anggita@gmail.com">
+              <Image src={envelope} alt="E-Mail" title="jj.anggita@gmail.com" className="w-7" />
             </a>
           </div>
         </div>
