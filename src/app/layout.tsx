@@ -2,7 +2,7 @@ import './globals.css';
 import { Mulish, Poppins } from 'next/font/google';
 
 const mulish = Mulish({ subsets: ['latin'], variable: '--font-mulish' });
-const poppins = Poppins({ subsets: ['latin'], weight: ['700'], variable: '--font-poppins' });
+const poppins = Poppins({ subsets: ['latin'], weight: ['500', '700'], variable: '--font-poppins' });
 
 export const metadata = {
   title: 'Joseph Joshua Anggita | Full-stack developer',

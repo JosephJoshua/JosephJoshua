@@ -13,6 +13,7 @@ import trpc from '@/public/icons/trpc.svg';
 import golang from '@/public/icons/golang.svg';
 import postgresql from '@/public/icons/postgresql.svg';
 import clsx from 'clsx';
+import { GitHub, Linkedin, Mail } from 'react-feather';
 
 export type IntroductionProps = {
   className?: string;
@@ -23,7 +24,7 @@ const Introduction = ({ className }: IntroductionProps) => {
     <section className={clsx('mx-auto max-w-4xl', className)}>
       <div className="flex gap-16 items-center">
         <div>
-          <h1 className="font-poppins font-bold text-5xl text-darkgrey leading-tight">
+          <h1 className="font-poppins font-bold text-5xl leading-tight">
             Full-stack Web Developer 👋
           </h1>
           <p className="mt-4 text-lg text-lightgrey">
@@ -32,16 +33,16 @@ const Introduction = ({ className }: IntroductionProps) => {
           </p>
 
           <div className="flex flex-row items-center gap-5 mt-6 select-none">
-            <a href="https://github.com/JosephJoshua">
-              <Image src={github} alt="Github" title="GitHub" className="w-7" />
+            <a href="https://github.com/JosephJoshua" aria-label="GitHub">
+              <GitHub className="w-7" />
             </a>
 
-            <a href="https://linkedin.com/in/joseph-joshua-anggita">
-              <Image src={linkedin} alt="LinkedIn" title="LinkedIn" className="w-7" />
+            <a href="https://linkedin.com/in/joseph-joshua-anggita" aria-label="LinkedIn">
+              <Linkedin className="w-7" />
             </a>
 
-            <a href="mailto:jj.anggita@gmail.com">
-              <Image src={envelope} alt="E-Mail" title="jj.anggita@gmail.com" className="w-7" />
+            <a href="mailto:jj.anggita@gmail.com" aria-label="jj.anggita@gmail.com">
+              <Mail className="w-7" />
             </a>
           </div>
         </div>
@@ -54,7 +55,7 @@ const Introduction = ({ className }: IntroductionProps) => {
       </div>
 
       <div className="flex items-center mt-16 text-lg">
-        <p className="text-darkgrey">Tech Stack</p>
+        <p>Tech Stack</p>
         <span className="text-lightgrey ml-4">|</span>
 
         <div className="flex ml-8 select-none gap-4">
