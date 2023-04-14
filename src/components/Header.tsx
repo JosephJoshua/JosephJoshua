@@ -9,6 +9,8 @@ export type HeaderProps = {
 };
 
 const getShouldPopUp = () => {
+  if (window == null) return false;
+
   const THRESHOLD = 50;
   return window.scrollY >= THRESHOLD;
 };
