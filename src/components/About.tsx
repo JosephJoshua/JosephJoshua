@@ -28,7 +28,7 @@ const About = ({ className }: AboutProps) => {
   }, []);
 
   return (
-    <section ref={ref} className={clsx('relative overflow-hidden py-12', className)}>
+    <section ref={ref} className={clsx('relative overflow-hidden', className)}>
       <h2
         className="absolute left-[-15%] top-0 uppercase text-[180px] font-bold text-lightgrey/10 select-none transition-transform ease-out duration-750"
         style={{ transform: `translateX(${translateX}%)` }}

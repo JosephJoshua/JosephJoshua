@@ -7,7 +7,7 @@ const HomePage = () => {
     <main className="text-darkgrey">
       <Introduction className="mt-36 mb-32" />
       <About className="mt-20" />
-      <ProjectList className="my-32" />
+      <ProjectList className="mt-32 mb-20" />
     </main>
   );
 };
