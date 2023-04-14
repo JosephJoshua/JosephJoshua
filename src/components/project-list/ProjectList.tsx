@@ -28,11 +28,12 @@ const projects = new Array<Project>(
 
 export type ProjectListProps = {
   className?: string;
+  id?: string;
 };
 
-const ProjectList = ({ className }: ProjectListProps) => {
+const ProjectList = ({ id, className }: ProjectListProps) => {
   return (
-    <section className="bg-white py-8">
+    <section id={id} className="bg-white py-8">
       <div className={clsx('mx-auto max-w-4xl', className)}>
         <h2 className="text-3xl font-medium font-poppins">Some Things I've Worked On</h2>
         <ul className="flex flex-col gap-12 mt-8">

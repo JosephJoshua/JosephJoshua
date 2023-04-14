@@ -1,29 +1,24 @@
 'use client';
 
+import useWindowEvent from '@/hooks/useWindowEvent';
 import clsx from 'clsx';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export type HeaderProps = {
   className?: string;
 };
 
+const getShouldPopUp = () => {
+  const THRESHOLD = 50;
+  return window.scrollY >= THRESHOLD;
+};
+
 const Header = ({ className }: HeaderProps) => {
-  const [popUp, setPopUp] = useState<boolean>(false);
+  const [popUp, setPopUp] = useState<boolean>(getShouldPopUp());
 
-  const handleScroll = () => {
-    const THRESHOLD = 50;
-    const shouldPopUp = window.scrollY >= THRESHOLD;
-
-    setPopUp(shouldPopUp);
-  };
-
-  useEffect(() => {
-    if (window == null) return;
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useWindowEvent('scroll', () => {
+    setPopUp(getShouldPopUp());
+  });
 
   return (
     <header
@@ -34,13 +29,13 @@ const Header = ({ className }: HeaderProps) => {
         className,
       )}
     >
-      <h1 className="text-xl font-bold">Joseph</h1>
+      <h1 className="text-xl font-bold">jjang</h1>
 
       <nav className="flex justify-end font-semibold text-lg gap-6">
-        <Link href="#home">Home</Link>
-        <Link href="#home">About</Link>
-        <Link href="#home">Projects</Link>
-        <Link href="#home">Contact</Link>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#home">Contact</a>
       </nav>
     </header>
   );

@@ -4,10 +4,10 @@ import { ProjectList } from '@/components/project-list';
 
 const HomePage = () => {
   return (
-    <main className="text-darkgrey">
-      <Introduction className="mt-36 mb-32" />
-      <About className="mt-20" />
-      <ProjectList className="mt-32 mb-20" />
+    <main className="text-darkgrey flex flex-col gap-y-48 pt-24 pb-12">
+      <Introduction id="home" />
+      <About id="about" />
+      <ProjectList id="projects" />
     </main>
   );
 };

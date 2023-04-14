@@ -1,8 +1,6 @@
 import Image from 'next/image';
-
-import github from '@/public/icons/github.svg';
-import linkedin from '@/public/icons/linkedin.svg';
-import envelope from '@/public/icons/envelope.svg';
+import { GitHub, Linkedin, Mail } from 'react-feather';
+import clsx from 'clsx';
 
 import portrait from '@/public/images/portrait.png';
 
@@ -12,16 +10,15 @@ import tailwind from '@/public/icons/tailwind.svg';
 import trpc from '@/public/icons/trpc.svg';
 import golang from '@/public/icons/golang.svg';
 import postgresql from '@/public/icons/postgresql.svg';
-import clsx from 'clsx';
-import { GitHub, Linkedin, Mail } from 'react-feather';
 
 export type IntroductionProps = {
   className?: string;
+  id?: string;
 };
 
-const Introduction = ({ className }: IntroductionProps) => {
+const Introduction = ({ className, id }: IntroductionProps) => {
   return (
-    <section className={clsx('mx-auto max-w-4xl', className)}>
+    <section id={id} className={clsx('mx-auto max-w-4xl', className)}>
       <div className="flex gap-16 items-center">
         <div>
           <h1 className="font-poppins font-bold text-5xl leading-tight">
