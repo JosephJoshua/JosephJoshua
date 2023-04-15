@@ -35,7 +35,7 @@ const ProjectList = ({ id, className }: ProjectListProps) => {
   return (
     <section id={id} className="bg-white py-8">
       <div className={clsx('mx-auto max-w-4xl', className)}>
-        <h2 className="text-3xl font-medium font-poppins">Some Things I've Worked On</h2>
+        <h2 className="text-3xl font-bold font-poppins">Some Things I've Worked On</h2>
         <ul className="flex flex-col gap-12 mt-8">
           {projects.map((project, idx) => (
             <ProjectItem key={project.title} project={project} right={idx % 2 === 1} />
