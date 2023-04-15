@@ -2,7 +2,7 @@
 
 import useWindowEvent from '@/hooks/useWindowEvent';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export type HeaderProps = {
   className?: string;
@@ -16,11 +16,14 @@ const getShouldPopUp = () => {
 };
 
 const Header = ({ className }: HeaderProps) => {
-  const [popUp, setPopUp] = useState<boolean>(getShouldPopUp());
+  const [popUp, setPopUp] = useState<boolean>(false);
 
-  useWindowEvent('scroll', () => {
+  const handleScroll = () => {
     setPopUp(getShouldPopUp());
-  });
+  };
+
+  useEffect(handleScroll, []);
+  useWindowEvent('scroll', handleScroll);
 
   return (
     <header
