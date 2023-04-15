@@ -4,6 +4,7 @@ import useWindowEvent from '@/hooks/useWindowEvent';
 import BaseProps from '@/types/BaseProps';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
+import PopupLink from './PopupLink';
 
 export type HeaderProps = BaseProps;
 
@@ -36,11 +37,11 @@ const Header = ({ className, id }: HeaderProps) => {
     >
       <h1 className="text-xl font-bold">jjang</h1>
 
-      <nav className="flex justify-end font-semibold text-lg gap-6">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav className="flex justify-end font-semibold text-lg gap-8">
+        <PopupLink href="#home">Home</PopupLink>
+        <PopupLink href="#about">About</PopupLink>
+        <PopupLink href="#projects">Projects</PopupLink>
+        <PopupLink href="#contact">Contact</PopupLink>
       </nav>
     </header>
   );

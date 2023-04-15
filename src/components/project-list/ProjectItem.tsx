@@ -3,6 +3,7 @@ import { ExternalLink, GitHub } from 'react-feather';
 
 import { Project } from './types';
 import clsx from 'clsx';
+import PopupLink from '../PopupLink';
 
 export type ProjectItemProps = {
   project: Project;
@@ -12,7 +13,7 @@ export type ProjectItemProps = {
 const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
   return (
     <li className="grid grid-cols-2 gap-x-8">
-      <a
+      <PopupLink
         className={right ? 'order-2' : 'order-1'}
         href={project.demoLink ?? project.sourceLink}
         title={project.title}
@@ -24,7 +25,7 @@ const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
           alt=""
           className="border border-darkgrey rounded-md select-none"
         />
-      </a>
+      </PopupLink>
 
       <div
         className={clsx(
@@ -53,25 +54,25 @@ const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
 
         <div className={clsx('flex gap-4', right ? 'justify-start' : 'justify-end')}>
           {project.sourceLink != null ? (
-            <a
+            <PopupLink
               href={project.sourceLink}
               aria-label="GitHub"
               target="_blank"
               referrerPolicy="no-referrer"
             >
               <GitHub size={20} />
-            </a>
+            </PopupLink>
           ) : null}
 
           {project.demoLink != null ? (
-            <a
+            <PopupLink
               href={project.demoLink}
               aria-label="Demo"
               target="_blank"
               referrerPolicy="no-referrer"
             >
               <ExternalLink size={20} />
-            </a>
+            </PopupLink>
           ) : null}
         </div>
       </div>

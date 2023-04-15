@@ -2,6 +2,7 @@ import BaseProps from '@/types/BaseProps';
 import PageSection from './PageSection';
 import clsx from 'clsx';
 import { GitHub, Linkedin, Mail } from 'react-feather';
+import PopupLink from './PopupLink';
 
 export type ContactProps = BaseProps;
 
@@ -14,17 +15,17 @@ const Contact = ({ id, className }: BaseProps) => {
       </p>
 
       <div className="flex flex-row justify-center items-center gap-6 mt-8 select-none">
-        <a href="https://github.com/JosephJoshua" aria-label="GitHub">
+        <PopupLink href="https://github.com/JosephJoshua" aria-label="GitHub">
           <GitHub size={28} />
-        </a>
+        </PopupLink>
 
-        <a href="https://linkedin.com/in/joseph-joshua-anggita" aria-label="LinkedIn">
+        <PopupLink href="https://linkedin.com/in/joseph-joshua-anggita" aria-label="LinkedIn">
           <Linkedin size={28} />
-        </a>
+        </PopupLink>
 
-        <a href="mailto:jj.anggita@gmail.com" aria-label="jj.anggita@gmail.com">
+        <PopupLink href="mailto:jj.anggita@gmail.com" aria-label="jj.anggita@gmail.com">
           <Mail size={28} />
-        </a>
+        </PopupLink>
       </div>
     </PageSection>
   );
