@@ -59,7 +59,7 @@ const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
               target="_blank"
               referrerPolicy="no-referrer"
             >
-              <GitHub className="w-5" />
+              <GitHub size={20} />
             </a>
           ) : null}
 
@@ -70,7 +70,7 @@ const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
               target="_blank"
               referrerPolicy="no-referrer"
             >
-              <ExternalLink className="w-5" />
+              <ExternalLink size={20} />
             </a>
           ) : null}
         </div>

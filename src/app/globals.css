@@ -5,3 +5,9 @@
 html {
   @apply scroll-smooth scroll-py-24;
 }
+
+@layer components {
+  .page-section {
+    @apply mx-auto max-w-4xl;
+  }
+}

@@ -4,6 +4,8 @@ import { Project } from './types';
 
 import posad from '@/public/images/posad.jpg';
 import psm from '@/public/images/psm.jpg';
+import BaseProps from '@/types/BaseProps';
+import PageSection from '../PageSection';
 
 const projects = new Array<Project>(
   {
@@ -26,23 +28,18 @@ const projects = new Array<Project>(
   },
 );
 
-export type ProjectListProps = {
-  className?: string;
-  id?: string;
-};
+export type ProjectListProps = BaseProps;
 
-const ProjectList = ({ id, className }: ProjectListProps) => {
+const ProjectList = (props: ProjectListProps) => {
   return (
-    <section id={id} className="bg-white py-8">
-      <div className={clsx('mx-auto max-w-4xl', className)}>
-        <h2 className="text-3xl font-bold font-poppins">Some Things I've Worked On</h2>
-        <ul className="flex flex-col gap-12 mt-8">
-          {projects.map((project, idx) => (
-            <ProjectItem key={project.title} project={project} right={idx % 2 === 1} />
-          ))}
-        </ul>
-      </div>
-    </section>
+    <PageSection {...props}>
+      <h2 className="text-3xl font-bold font-poppins">Some Things I've Worked On</h2>
+      <ul className="flex flex-col gap-12 mt-8">
+        {projects.map((project, idx) => (
+          <ProjectItem key={project.title} project={project} right={idx % 2 === 1} />
+        ))}
+      </ul>
+    </PageSection>
   );
 };
 

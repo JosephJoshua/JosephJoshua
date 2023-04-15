@@ -1,12 +1,11 @@
 'use client';
 
 import useWindowEvent from '@/hooks/useWindowEvent';
+import BaseProps from '@/types/BaseProps';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
-export type HeaderProps = {
-  className?: string;
-};
+export type HeaderProps = BaseProps;
 
 const getShouldPopUp = () => {
   if (window == null) return false;
@@ -15,7 +14,7 @@ const getShouldPopUp = () => {
   return window.scrollY >= THRESHOLD;
 };
 
-const Header = ({ className }: HeaderProps) => {
+const Header = ({ className, id }: HeaderProps) => {
   const [popUp, setPopUp] = useState<boolean>(false);
 
   const handleScroll = () => {
@@ -27,6 +26,7 @@ const Header = ({ className }: HeaderProps) => {
 
   return (
     <header
+      id={id}
       className={clsx(
         'flex justify-between sticky top-0 inset-x-0 px-12 py-6 z-10',
         'transition-all duration-300 ease-in-out',
@@ -40,7 +40,7 @@ const Header = ({ className }: HeaderProps) => {
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#home">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
   );

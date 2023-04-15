@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { GitHub, Linkedin, Mail } from 'react-feather';
-import clsx from 'clsx';
+
+import BaseProps from '@/types/BaseProps';
+import PageSection from './PageSection';
 
 import portrait from '@/public/images/portrait.png';
 
@@ -13,14 +15,11 @@ import trpc from '@/public/icons/trpc.svg';
 import golang from '@/public/icons/golang.svg';
 import postgresql from '@/public/icons/postgresql.svg';
 
-export type IntroductionProps = {
-  className?: string;
-  id?: string;
-};
+export type IntroductionProps = BaseProps;
 
-const Introduction = ({ className, id }: IntroductionProps) => {
+const Introduction = (props: IntroductionProps) => {
   return (
-    <section id={id} className={clsx('mx-auto max-w-4xl', className)}>
+    <PageSection {...props}>
       <div className="flex gap-16 items-center">
         <div>
           <h1 className="font-poppins font-bold text-5xl leading-tight">
@@ -30,20 +29,6 @@ const Introduction = ({ className, id }: IntroductionProps) => {
             Hi, I'm Joseph Joshua Anggita. A passionate Full-stack Web Developer based in Jakarta,
             Indonesia. 📍
           </p>
-
-          <div className="flex flex-row items-center gap-5 mt-6 select-none">
-            <a href="https://github.com/JosephJoshua" aria-label="GitHub">
-              <GitHub className="w-7" />
-            </a>
-
-            <a href="https://linkedin.com/in/joseph-joshua-anggita" aria-label="LinkedIn">
-              <Linkedin className="w-7" />
-            </a>
-
-            <a href="mailto:jj.anggita@gmail.com" aria-label="jj.anggita@gmail.com">
-              <Mail className="w-7" />
-            </a>
-          </div>
         </div>
 
         <Image
@@ -68,7 +53,7 @@ const Introduction = ({ className, id }: IntroductionProps) => {
           <Image src={postgresql} alt="PostgreSQL" title="PostgreSQL" className="rounded w-8" />
         </div>
       </div>
-    </section>
+    </PageSection>
   );
 };
 
