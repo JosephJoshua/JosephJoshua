@@ -29,7 +29,7 @@ const Header = ({ className, id }: HeaderProps) => {
     <header
       id={id}
       className={clsx(
-        'flex justify-between sticky top-0 inset-x-0 px-12 py-6 z-10',
+        'flex justify-between sticky top-0 inset-x-0 px-12 py-5 z-10',
         'transition-all duration-300 ease-in-out',
         popUp && 'backdrop-blur-md bg-white/80 shadow',
         className,
@@ -38,10 +38,10 @@ const Header = ({ className, id }: HeaderProps) => {
       <h1 className="text-xl font-bold">jjang</h1>
 
       <nav className="flex justify-end font-semibold text-lg gap-8">
-        <PopupLink href="#home">Home</PopupLink>
-        <PopupLink href="#about">About</PopupLink>
-        <PopupLink href="#projects">Projects</PopupLink>
-        <PopupLink href="#contact">Contact</PopupLink>
+        <PopupLink href="#home">home</PopupLink>
+        <PopupLink href="#about">about</PopupLink>
+        <PopupLink href="#projects">projects</PopupLink>
+        <PopupLink href="#contact">contact</PopupLink>
       </nav>
     </header>
   );
