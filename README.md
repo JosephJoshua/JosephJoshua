@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 style="text-align: center;">
+  Hi there!
+  <img src="https://raw.githubusercontent.com/JosephJoshua/JosephJoshua/main/docs/assets/wave.gif" alt="" width="30px" height="30px">
+</h1>
 
-## Getting Started
+<h4 style="text-align: center;">
+  I'm Joseph - a software engineer from Jakarta, Indonesia.
+</h3>
 
-First, run the development server:
+## 🔧 Technology
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![](https://img.shields.io/badge/OS-macOS-informational?style=flat&logo=apple&logoColor=white&color=2bbc8a)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![](https://img.shields.io/badge/Editor-Visual_Studio_Code-informational?style=flat&logo=visual-studio-code&logoColor=white&color=ff6000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![](https://img.shields.io/badge/Code-TypeScript-informational?style=flat&logo=typescript&logoColor=white&color=7149c6)
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&logoColor=white&color=7149c6)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![](https://img.shields.io/badge/Code-React_Native-informational?style=flat&logo=react&logoColor=white&color=7149c6)
 
-## Learn More
+![](https://img.shields.io/badge/Code-Next.JS-informational?style=flat&logo=next.js&logoColor=white&color=7149c6)
 
-To learn more about Next.js, take a look at the following resources:
+![](https://img.shields.io/badge/Code-Vue.JS-informational?style=flat&logo=vuedotjs&logoColor=white&color=7149c6)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![](https://img.shields.io/badge/Code-Go-informational?style=flat&logo=go&logoColor=white&color=7149c6)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![](https://img.shields.io/badge/Code-TailwindCSS-informational?style=flat&logo=tailwind-css&logoColor=white&color=7149c6)
 
-## Deploy on Vercel
+![](https://img.shields.io/badge/Database-PostgreSQL-informational?style=flat&logo=postgresql&logoColor=white&color=7149c6)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## &#x1f4c8; Github Stats
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href="https://github.com/JosephJoshua">
+  <img style="text-align: center;" src="https://github-readme-stats.vercel.app/api?username=JosephJoshua&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" alt="" />
+</a>
+
+<a href="https://github.com/JosephJoshua">
+  <img style="text-align: center;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JosephJoshua&hide=html&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" alt="" />
+</a>
