@@ -1,7 +1,7 @@
-import About from '@/components/About';
-import Contact from '@/components/Contact';
-import Introduction from '@/components/Introduction';
-import { ProjectList } from '@/components/project-list';
+import About from '@/components/home/About';
+import Contact from '@/components/home/Contact';
+import Introduction from '@/components/home/Introduction';
+import { ProjectList } from '@/components/home/project-list';
 
 const HomePage = () => {
   return (

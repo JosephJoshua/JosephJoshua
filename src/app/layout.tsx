@@ -2,8 +2,8 @@ import './globals.css';
 
 import { Mulish, Poppins } from 'next/font/google';
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/home/Header';
+import Footer from '@/components/home/Footer';
 
 const mulish = Mulish({ subsets: ['latin'], variable: '--font-mulish' });
 const poppins = Poppins({
@@ -14,16 +14,16 @@ const poppins = Poppins({
 
 export const metadata = {
   title: 'Joseph Joshua Anggita | Full-stack developer',
-  description: '',
+  description: 'Full-stack developer specializing in building exceptional digital experiences.',
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className={`${mulish.variable} ${poppins.variable} font-mulish`}>
+      <body className={`${mulish.variable} ${poppins.variable} font-mulish pb-8`}>
         <Header />
         {children}
-        <Footer className="mb-8" />
+        <Footer />
       </body>
     </html>
   );

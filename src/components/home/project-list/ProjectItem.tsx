@@ -3,7 +3,7 @@ import { ExternalLink, GitHub } from 'react-feather';
 
 import { Project } from './types';
 import clsx from 'clsx';
-import PopupLink from '../PopupLink';
+import PopupLink from '../../shared/PopupLink';
 
 export type ProjectItemProps = {
   project: Project;

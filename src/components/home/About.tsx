@@ -4,7 +4,7 @@ import useWindowEvent from '@/hooks/useWindowEvent';
 import BaseProps from '@/types/BaseProps';
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
-import PageSection from './PageSection';
+import PageSection from '../shared/PageSection';
 
 export type AboutProps = BaseProps;
 

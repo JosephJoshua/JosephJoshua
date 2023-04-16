@@ -5,7 +5,7 @@ import { Project } from './types';
 import posad from '@/public/images/posad.jpg';
 import psm from '@/public/images/psm.jpg';
 import BaseProps from '@/types/BaseProps';
-import PageSection from '../PageSection';
+import PageSection from '../../shared/PageSection';
 
 const projects = new Array<Project>(
   {

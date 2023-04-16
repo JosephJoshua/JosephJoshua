@@ -4,7 +4,7 @@ import useWindowEvent from '@/hooks/useWindowEvent';
 import BaseProps from '@/types/BaseProps';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
-import PopupLink from './PopupLink';
+import PopupLink from '../shared/PopupLink';
 
 export type HeaderProps = BaseProps;
 

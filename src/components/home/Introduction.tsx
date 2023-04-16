@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { GitHub, Linkedin, Mail } from 'react-feather';
 
 import BaseProps from '@/types/BaseProps';
-import PageSection from './PageSection';
+import PageSection from '../shared/PageSection';
 
 import portrait from '@/public/images/portrait.png';
 

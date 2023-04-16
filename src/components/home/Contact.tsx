@@ -1,8 +1,8 @@
 import BaseProps from '@/types/BaseProps';
-import PageSection from './PageSection';
+import PageSection from '../shared/PageSection';
 import clsx from 'clsx';
 import { GitHub, Linkedin, Mail } from 'react-feather';
-import PopupLink from './PopupLink';
+import PopupLink from '../shared/PopupLink';
 
 export type ContactProps = BaseProps;
 
