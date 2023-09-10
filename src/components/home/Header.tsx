@@ -112,17 +112,15 @@ const Header = ({ className, id }: HeaderProps) => {
                 <div className="flex justify-between">
                   <div></div>
 
-                  <Dialog.Title className="text-2xl font-bold">
-                    <Image
-                      src={logo}
-                      width="48"
-                      height="48"
-                      alt="Joseph Joshua Anggita"
-                      title="Joseph Joshua Anggita"
-                    />
-                  </Dialog.Title>
+                  <Image
+                    src={logo}
+                    width="48"
+                    height="48"
+                    alt="Joseph Joshua Anggita"
+                    title="Joseph Joshua Anggita"
+                  />
 
-                  <button aria-label="Close" onClick={handleCloseMenu}>
+                  <button aria-label="Close Menu" onClick={handleCloseMenu}>
                     <X size={28} />
                   </button>
                 </div>

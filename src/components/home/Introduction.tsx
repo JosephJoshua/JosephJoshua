@@ -31,6 +31,7 @@ const Introduction = (props: IntroductionProps) => {
         </div>
 
         <Image
+          priority
           className="w-56 md:w-72 border-3 border-black animate-morph-infinite select-none"
           src={portrait}
           alt=""
