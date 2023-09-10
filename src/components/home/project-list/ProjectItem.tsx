@@ -12,9 +12,9 @@ export type ProjectItemProps = {
 
 const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
   return (
-    <li className="grid grid-cols-2 gap-x-8">
+    <li className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 items-center">
       <PopupLink
-        className={right ? 'order-2' : 'order-1'}
+        className={right ? 'sm:order-2' : 'sm:order-1'}
         href={project.demoLink ?? project.sourceLink}
         title={project.title}
         target="_blank"
@@ -29,30 +29,30 @@ const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
 
       <div
         className={clsx(
-          'flex flex-col justify-between py-6',
+          'flex flex-col items-center sm:items-stretch justify-between py-6 max-w-full',
           right ? 'text-start' : 'text-end',
-          right ? 'order-1' : 'order-2',
+          right ? 'sm:order-1' : 'sm:order-2',
         )}
       >
-        <div>
-          <span className="text-lightgrey font-semibold">{project.type}</span>
+        <div className="text-center">
+          <span className="text-sm sm:text-base text-lightgrey font-semibold">{project.type}</span>
           <h3 className="text-2xl font-semibold">{project.title}</h3>
         </div>
 
-        <p>{project.description}</p>
+        <p className="mt-2 text-sm sm:text-base text-center sm:text-end">{project.description}</p>
 
         <div
           className={clsx(
-            'flex gap-4 text-sm tracking-wider',
+            'flex gap-4 text-sm tracking-wider mt-2 mx-w-full',
             right ? 'justify-start' : 'justify-end',
           )}
         >
           {project.skills.map((skill) => (
-            <span>{skill}</span>
+            <div key={skill}>{skill}</div>
           ))}
         </div>
 
-        <div className={clsx('flex gap-4', right ? 'justify-start' : 'justify-end')}>
+        <div className={clsx('flex gap-4 mt-4', right ? 'justify-start' : 'justify-end')}>
           {project.sourceLink != null ? (
             <PopupLink
               href={project.sourceLink}

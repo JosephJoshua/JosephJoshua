@@ -9,8 +9,8 @@ export type ContactProps = BaseProps;
 const Contact = ({ id, className }: BaseProps) => {
   return (
     <PageSection id={id} className={clsx('text-center', className)}>
-      <h2 className="text-3xl font-bold font-poppins">Don't be shy - hit me up!</h2>
-      <p className="mt-2 text-xl">
+      <h2 className="text-2xl md:text-3xl font-bold font-poppins">Don't be shy - hit me up!</h2>
+      <p className="mt-2 text-lg md:text-xl">
         I'm interested in freelance opportunities, especially ambitious or large projects.
       </p>
 

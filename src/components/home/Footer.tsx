@@ -5,7 +5,7 @@ export type FooterProps = BaseProps;
 
 const Footer = ({ className, id }: FooterProps) => {
   return (
-    <footer id={id} className={clsx('text-center font-poppins', className)}>
+    <footer id={id} className={clsx('text-center font-poppins text-sm md:text-base', className)}>
       Built with &lt;3 by Joseph Joshua Anggita
     </footer>
   );

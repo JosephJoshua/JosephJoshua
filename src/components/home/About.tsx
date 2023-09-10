@@ -27,13 +27,13 @@ const About = ({ id, className }: AboutProps) => {
   return (
     <section id={id} ref={ref} className={clsx('relative overflow-hidden py-16', className)}>
       <h2
-        className="absolute left-[-15%] top-1/2 uppercase text-[180px] font-bold text-lightgrey/10 select-none transition-transform ease-out duration-750"
+        className="absolute left-[-20%] top-1/2 uppercase text-[64px] sm:text-[80px] md:text-[160px] font-bold text-lightgrey/10 select-none transition-transform ease-out duration-750"
         style={{ transform: `translate(${translateX}%, -50%)` }}
       >
         About Me
       </h2>
 
-      <PageSection className="text-2xl">
+      <PageSection className="text-lg sm:text-xl md:text-2xl">
         <p>Full-stack developer specializing in building exceptional digital experiences.</p>
         <p>A team player who thrives in collaborating with cross-functional teams.</p>
       </PageSection>

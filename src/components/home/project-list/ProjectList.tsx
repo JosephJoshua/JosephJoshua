@@ -33,7 +33,9 @@ export type ProjectListProps = BaseProps;
 const ProjectList = (props: ProjectListProps) => {
   return (
     <PageSection {...props}>
-      <h2 className="text-3xl font-bold font-poppins">Some Things I've Worked On</h2>
+      <h2 className="text-3xl font-bold font-poppins text-center sm:text-start">
+        Some Things I've Worked On
+      </h2>
       <ul className="flex flex-col gap-12 mt-8">
         {projects.map((project, idx) => (
           <ProjectItem key={project.title} project={project} right={idx % 2 === 1} />
