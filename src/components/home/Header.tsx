@@ -8,6 +8,9 @@ import PopupLink from '../shared/PopupLink';
 import { Dialog, Transition } from '@headlessui/react';
 import { Menu, X } from 'react-feather';
 
+import logo from '@/public/icons/logo.svg';
+import Image from 'next/image';
+
 export type HeaderProps = BaseProps;
 
 const getShouldPopUp = () => {
@@ -66,13 +69,19 @@ const Header = ({ className, id }: HeaderProps) => {
     <header
       id={id}
       className={clsx(
-        'flex justify-between sticky top-0 inset-x-0 px-12 py-5 z-10 gap-6',
+        'flex justify-between items-center sticky top-0 inset-x-0 px-12 py-5 z-10 gap-6',
         'transition-all duration-300 ease-in-out',
         popUp && 'backdrop-blur-md bg-white/80 shadow',
         className,
       )}
     >
-      <h1 className="text-xl font-bold">jjang</h1>
+      <Image
+        src={logo}
+        width="48"
+        height="48"
+        alt="Joseph Joshua Anggita"
+        title="Joseph Joshua Anggita"
+      />
 
       <nav className="hidden md:flex justify-end font-semibold text-lg gap-8">
         <Links />
@@ -103,8 +112,14 @@ const Header = ({ className, id }: HeaderProps) => {
                 <div className="flex justify-between">
                   <div></div>
 
-                  <Dialog.Title as="h3" className="text-2xl font-bold">
-                    jjang
+                  <Dialog.Title className="text-2xl font-bold">
+                    <Image
+                      src={logo}
+                      width="48"
+                      height="48"
+                      alt="Joseph Joshua Anggita"
+                      title="Joseph Joshua Anggita"
+                    />
                   </Dialog.Title>
 
                   <button aria-label="Close" onClick={handleCloseMenu}>

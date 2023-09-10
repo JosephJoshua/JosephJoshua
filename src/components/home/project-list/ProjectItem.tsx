@@ -29,17 +29,17 @@ const ProjectItem = ({ project, right = false }: ProjectItemProps) => {
 
       <div
         className={clsx(
-          'flex flex-col items-center sm:items-stretch justify-between py-6 max-w-full',
-          right ? 'text-start' : 'text-end',
+          'flex flex-col items-center text-center sm:items-stretch justify-between py-6 max-w-full',
+          right ? 'sm:text-start' : 'sm:text-end',
           right ? 'sm:order-1' : 'sm:order-2',
         )}
       >
-        <div className="text-center">
+        <div>
           <span className="text-sm sm:text-base text-lightgrey font-semibold">{project.type}</span>
           <h3 className="text-2xl font-semibold">{project.title}</h3>
         </div>
 
-        <p className="mt-2 text-sm sm:text-base text-center sm:text-end">{project.description}</p>
+        <p className="mt-2 text-sm sm:text-base">{project.description}</p>
 
         <div
           className={clsx(
